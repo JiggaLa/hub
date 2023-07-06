@@ -68,11 +68,92 @@ const posts = [
 
 <template>
   <div class="container">
+    <!-- Mobile Header -->
+    <div
+      class="fixed top-0 inset-x-auto h-[60px] px-6 py-3 fixed items-center justify-between w-full z-[9000] bg-hub-bg-black/70 backdrop-blur-[70px] backdrop-saturate-200 border-b border-hub-black-1 hidden lg:flex"
+    >
+      <svg
+        width="24"
+        height="11"
+        viewBox="0 0 24 11"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M2 2H22"
+          stroke="white"
+          stroke-width="3"
+          stroke-linecap="round"
+        />
+        <path
+          d="M2 9.5H22"
+          stroke="white"
+          stroke-width="3"
+          stroke-linecap="round"
+        />
+      </svg>
+
+      <svg
+        viewBox="0 0 62 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-[62px]"
+      >
+        <g clip-path="url(#clip0_78_3867)">
+          <path
+            d="M2.66564 23.4H0V8.39999H2.66564V14.4045H13.1764V8.39999H15.842V23.4H13.1764V17.3505H2.66564V23.4Z"
+            fill="white"
+          />
+          <path
+            d="M22.5989 32C21.449 32 20.5305 31.5952 19.8433 30.7856C19.156 29.976 18.8124 28.9865 18.8124 27.8171V17H21.9447V27.9295C21.9447 28.6792 22.275 29.054 22.9359 29.054H32.531C33.1785 29.054 33.5024 28.6792 33.5024 27.9295V17H36.6346V27.8171C36.6346 28.9865 36.291 29.976 35.6038 30.7856C34.9165 31.5952 33.998 32 32.8482 32H22.5989Z"
+            fill="white"
+          />
+          <path
+            d="M32.8482 9.04956e-07C33.998 1.00648e-06 34.9165 0.404797 35.6038 1.21439C36.291 2.02399 36.6346 3.01349 36.6346 4.18292V15H33.5024V4.07048C33.5024 3.32084 33.172 2.94603 32.5111 2.94603H22.9161C22.2685 2.94603 21.9447 3.32084 21.9447 4.07048V15H18.8124V4.18292C18.8124 3.01349 19.156 2.02399 19.8433 1.21439C20.5305 0.404797 21.449 -1.01524e-07 22.5989 0L32.8482 9.04956e-07Z"
+            fill="url(#paint0_linear_78_3867)"
+          />
+          <path
+            d="M39.6228 23.4L39.605 8.39999H51.6101C52.3293 8.39999 52.9657 8.62487 53.5198 9.07467C54.0858 9.50943 54.4981 10.1166 54.7575 10.8962C54.9341 11.421 55.0228 12.1931 55.0228 13.2126C55.0228 14.0522 54.8517 14.8243 54.5099 15.5289C54.8989 16.0087 55.1523 16.5484 55.2704 17.1481C55.388 17.7328 55.447 18.4225 55.447 19.2171C55.447 20.3865 55.1345 21.376 54.5099 22.1856C53.8968 22.9952 53.0838 23.4 52.0699 23.4H39.6228ZM42.3987 17.3505V20.454H51.7693C52.3586 20.454 52.6533 20.0792 52.6533 19.3295V18.4525C52.6533 18.0627 52.5828 17.7853 52.4414 17.6204C52.3115 17.4405 52.0877 17.3505 51.7693 17.3505H42.3987ZM42.3987 14.4045H51.3451C51.9344 14.4045 52.2291 14.0297 52.2291 13.2801V12.448C52.2291 11.7134 51.9344 11.346 51.3451 11.346H42.3987V14.4045Z"
+            fill="white"
+          />
+          <path
+            d="M56.3354 5.39999V3.02011H55.447V2.39999H57.9164V3.02011H57.0281V5.39999H56.3354Z"
+            fill="white"
+          />
+          <path
+            d="M58.1631 2.39999H58.8471L59.7532 3.86647H59.7976L60.7037 2.39999H61.3877V5.39999H60.7037V4.07179L60.7481 3.56899H60.7037L59.9798 4.76311H59.571L58.8471 3.56899H58.8027L58.8471 4.07179V5.39999H58.1631V2.39999Z"
+            fill="white"
+          />
+        </g>
+        <defs>
+          <linearGradient
+            id="paint0_linear_78_3867"
+            x1="18.8124"
+            y1="17.6087"
+            x2="35.4223"
+            y2="3.13871"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#69E243" />
+            <stop offset="0.244792" stop-color="#09B3FF" />
+            <stop offset="0.473958" stop-color="#904FE0" />
+            <stop offset="0.75" stop-color="#FE01C8" />
+            <stop offset="1" stop-color="#FFF842" />
+          </linearGradient>
+          <clipPath id="clip0_78_3867">
+            <rect width="61.3878" height="32" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <div></div>
+    </div>
+
     <PrimarySidebar />
 
     <!-- Secondary Sidebar -->
     <section
-      class="w-[352px] h-screen border-r border-hub-black-1 sticky top-0 pb-24 overflow-y-auto overflow-x-clip scrollbar-hide lg:w-[280px] md:w-full"
+      class="w-[352px] h-screen border-r border-hub-black-1 sticky top-0 pb-24 overflow-y-auto overflow-x-clip scrollbar-hide lg:w-[280px] md:w-full lg:pt-[60px]"
     >
       <div
         class="px-4 py-5 flex items-center justify-between bg-hub-bg-black/70 sticky inset-x-0 top-0 z-10 backdrop-blur-[70px] backdrop-saturate-200"
@@ -106,7 +187,7 @@ const posts = [
 
     <!-- Page Body -->
     <section
-      class="flex flex-col h-screen justify-start grow overflow-y-auto overflow-x-clip md:hidden"
+      class="flex flex-col h-screen justify-start grow overflow-y-auto overflow-x-clip md:hidden lg:pt-[60px]"
     >
       <!-- Body Header -->
       <div
